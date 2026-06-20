@@ -1,0 +1,14 @@
+# Dev overrides — expose Supabase Kong on host
+services:
+  kong:
+    ports:
+      - "8000:8000"
+
+  db:
+    ports:
+      - "5432:5432"
+
+  mail:
+    ports:
+      - "2500:2500" # SMTP (GoTrue → supabase-mail)
+      - "9000:9000" # Web UI — open magic links at http://localhost:9000

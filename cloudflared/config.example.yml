@@ -1,0 +1,17 @@
+# Cloudflare Tunnel example config
+# Run cloudflared outside Docker or as separate service on NAS
+#
+# Setup:
+# 1. cloudflared tunnel create holy-ranking
+# 2. Copy credentials to /etc/cloudflared/creds.json
+# 3. Point DNS CNAME to tunnel
+# 4. Set NEXT_PUBLIC_SITE_URL and SITE_URL to your tunnel domain
+# 5. Add tunnel URL to ADDITIONAL_REDIRECT_URLS for auth callback
+
+tunnel: holy-ranking
+credentials-file: /etc/cloudflared/creds.json
+
+ingress:
+  - hostname: ranking.deine-domain.de
+    service: http://localhost:3000
+  - service: http_status:404

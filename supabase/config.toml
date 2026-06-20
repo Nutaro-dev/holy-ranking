@@ -1,0 +1,29 @@
+# Supabase CLI config — link your cloud project for migrations.
+# Docs: https://supabase.com/docs/guides/cli
+#
+# Setup:
+#   1. Install CLI: https://supabase.com/docs/guides/cli/getting-started
+#   2. supabase login
+#   3. supabase link --project-ref YOUR_PROJECT_REF
+#   4. supabase db push          # apply supabase/migrations/*.sql
+#   5. Run supabase/seed.sql in Dashboard SQL Editor (or psql)
+#
+# Alternative without CLI: paste each file from supabase/migrations/ into
+# Dashboard → SQL Editor, then run supabase/seed.sql.
+
+project_id = "hvzheluudpfxioxocygu"
+
+[api]
+enabled = true
+
+[db]
+port = 54322
+major_version = 15
+
+[db.migrations]
+enabled = true
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000/auth/callback"]

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF006E;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#FF006E;stop-opacity:0.1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="#12121a"/>
+  <rect width="400" height="300" fill="url(#g)"/>
+  <text x="200" y="150" text-anchor="middle" fill="#FF006E" font-family="system-ui,sans-serif" font-size="24" font-weight="bold">HOLY Energy</text>
+</svg>

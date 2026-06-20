@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --line-energy: #ff006e;
+  --line-iced-tea: #00c896;
+  --line-hydration: #7b2ff7;
+  --line-milkshake: #ffb347;
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-elevated: #1a1a24;
+  --text-primary: #f5f5f7;
+  --text-muted: #8b8b9e;
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --font-display: 'Outfit Variable', system-ui, sans-serif;
+  --font-body: 'DM Sans Variable', system-ui, sans-serif;
+  --radius: 16px;
+  --nav-height: 72px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-background text-foreground font-body antialiased;
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(123, 47, 247, 0.15), transparent),
+    var(--bg-primary);
+  min-height: 100dvh;
+}
+
+@layer utilities {
+  .glass-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    border-radius: var(--radius);
+  }
+
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .line-accent-energy {
+    --accent: var(--line-energy);
+  }
+
+  .line-accent-iced-tea {
+    --accent: var(--line-iced-tea);
+  }
+
+  .line-accent-hydration {
+    --accent: var(--line-hydration);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--glass-border);
+  border-radius: 4px;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+}
